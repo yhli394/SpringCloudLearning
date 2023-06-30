@@ -7,6 +7,8 @@ spring:
         git:
           uri: https://github.com/yhli394/SpringCloudLearning
           search-paths: configcenter
+          timeout: 10
+          refresh-rate: 5
       label: master
 
 
