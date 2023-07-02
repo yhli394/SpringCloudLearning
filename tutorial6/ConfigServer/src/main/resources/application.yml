@@ -5,17 +5,22 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/yhli394/SpringCloudLearning
-          search-paths: tutorial6
-          timeout: 10
-          refresh-rate: 5
+          uri: https://github.com/yhli394/SpringCloudConfig
+#          search-paths:
+#            - config
+#          timeout: 10
+#          refresh-rate: 5
 #          proxy:
 #            https:
 #              host: localhost
 #              port: 7890
 
-      label: master
-
 
 server:
   port: 8888
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

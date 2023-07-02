@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      profile: dev
+      label: main
+      uri: http://localhost:8888
+      name: config-client
+
+
+server:
+  port: 8081
