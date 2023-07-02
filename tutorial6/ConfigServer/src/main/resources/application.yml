@@ -6,9 +6,14 @@ spring:
       server:
         git:
           uri: https://github.com/yhli394/SpringCloudLearning
-          search-paths: configcenter
+          search-paths: tutorial6
           timeout: 10
           refresh-rate: 5
+#          proxy:
+#            https:
+#              host: localhost
+#              port: 7890
+
       label: master
 
 
