@@ -7,7 +7,15 @@ spring:
       label: main
       uri: http://localhost:8888
       name: config-client
-
+      discovery:
+        enabled: true
+        service-id: config-server
 
 server:
   port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8889/eureka/
+
