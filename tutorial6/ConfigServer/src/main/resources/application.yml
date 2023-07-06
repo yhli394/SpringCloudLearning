@@ -5,22 +5,42 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/yhli394/SpringCloudConfig
-#          search-paths:
-#            - config
-#          timeout: 10
-#          refresh-rate: 5
-#          proxy:
-#            https:
-#              host: localhost
-#              port: 7890
+          uri: git@github.com:yhli394/SpringCloudConfig.git
+          default-label: main
+          force-pull: true
+          ignore-local-ssh-settings: true
+#          host-key:
+#          host-key-algorithm: ssh-rsa
+          privateKey: |
+                      -----BEGIN EC PRIVATE KEY-----
+                      MIHcAgEBBEIBIqxmyjlNLRrEvb7TJnHlnBkV9nK59LeJpcQ1bvsSmbVtUIxC75js
+                      rc6y7T/XjEF04j2FWpZ9oVTbmpMSZKtB8DugBwYFK4EEACOhgYkDgYYABAC8EeGd
+                      RYyyErXRH9Ud618oIHL/hGD+/I4POtfsOGnr6hDBi6VHe50grBfVDPIEKnznHmk3
+                      yWLXZDmNZST5iayXYQCIPrjNVW5M3eTLRiBQTXsbAnzwywH7lrbbh42W1jo3XUy7
+                      IKjGuix9Q+XdTO2HLBcQE7xa6jNRH0G1YyEN+37J7w==
+                      -----END EC PRIVATE KEY-----
+      label: main
 
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 server:
   port: 8888
-
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8889/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: busrefresh
+
+
+
