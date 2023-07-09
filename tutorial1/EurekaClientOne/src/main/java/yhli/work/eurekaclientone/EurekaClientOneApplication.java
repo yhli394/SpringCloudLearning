@@ -1,4 +1,4 @@
-package yhli.work.eurekaclient;
+package yhli.work.eurekaclientone;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class EurekaClientApplication {
+public class EurekaClientOneApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaClientApplication.class, args);
+        SpringApplication.run(EurekaClientOneApplication.class, args);
     }
 
     @Value("${server.port}")

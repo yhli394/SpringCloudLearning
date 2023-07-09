@@ -1,0 +1,19 @@
+server:
+  port: 8761
+
+spring:
+  config:
+    activate:
+      on-profile: peer1
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone: http://peer2:8769/eureka/
+
+
+
+
+
+
